@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hollow Client — a lighter Minecraft client</title>
+<meta name="description" content="Hollow Client is a lightweight Minecraft client for 1.8.9 through 26.3. Curated mods, one-click profiles, and cosmetics unlocked by quests — all free.">
+<meta name="theme-color" content="#08080B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hollow Client — a lighter Minecraft client">
+<meta property="og:description" content="Hollow Client is a lightweight Minecraft client for 1.8.9 through 26.3. Curated mods, one-click profiles, and cosmetics unlocked by quests — all free.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+<symbol id="i-blocks" viewBox="0 0 24 24"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+<symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+<symbol id="i-package" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></symbol>
+<symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24"><path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/></symbol>
+<symbol id="i-terminal" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></symbol>
+<symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+<symbol id="i-feather" viewBox="0 0 24 24"><path d="M12.67 19a2 2 0 0 0 1.416-.588l6.154-6.172a6 6 0 0 0-8.49-8.49L5.586 9.914A2 2 0 0 0 5 11.328V18a1 1 0 0 0 1 1z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/></symbol>
+<symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></symbol>
+<symbol id="i-crown" viewBox="0 0 24 24"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></symbol>
+</svg>
+<header class="site-header"><div class="wrap">
+<div class="header-row"><a class="brand" href="index.html" aria-label="Hollow Client home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="mark-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="hsl(252 100% 75%)"/><stop offset="100%" stop-color="hsl(170 88% 52%)"/></linearGradient></defs><circle cx="16" cy="16" r="12.5" fill="none" stroke="url(#mark-h)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="66 13" transform="rotate(-38 16 16)"/><circle cx="16" cy="16" r="3.4" fill="hsl(40 22% 95%)"/></svg><span class="brand-name"><b>Hollow</b><span>client</span></span></a>
+<nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Overview</a><a href="downloads.html">Downloads</a><a href="changelog.html">Changelog</a><a href="shop.html">Cosmetics</a></nav>
+<div class="header-actions">
+<a class="btn btn-solid header-cta" href="downloads.html"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-download"/></svg>Download</a>
+<button class="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false"><svg class="icon i-open" aria-hidden="true"><use href="#i-menu"/></svg><svg class="icon i-close" aria-hidden="true"><use href="#i-x"/></svg></button>
+</div></div>
+<nav class="mobile-nav" aria-label="Mobile"><a href="index.html" aria-current="page">Overview</a><a href="downloads.html">Downloads</a><a href="changelog.html">Changelog</a><a href="shop.html">Cosmetics</a><a class="btn btn-solid" href="downloads.html">Download</a></nav>
+</div></header>
+<main>
+<section class="hero band">
+<div class="hero-bg"><img src="hero.jpg" alt="Voxel terrain floating in a void" width="1528" height="815" fetchpriority="high"><div class="shade"></div><div class="grid-fade"></div></div>
+<div class="wrap hero-inner">
+<div class="hero-copy animate-rise">
+<span class="pill"><span class="ping"></span><span id="hero-badge-text">0.0.1 · stable · 26.3</span></span>
+<h1>Every frame,<br><span class="text-gradient">none wasted.</span></h1>
+<p class="hero-lead">A lightweight Minecraft client for people who feel the difference of three milliseconds. Curated mods, instant profiles, cosmetics that cost you nothing in performance.</p>
+<div class="hero-actions">
+<a class="btn btn-solid btn-lg" href="downloads.html"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span id="hero-download-label">Download for Windows</span></a>
+<a class="btn btn-outline btn-lg" href="changelog.html">What changed in <span data-latest-version>0.0.1</span><svg class="icon icon-sm arrow" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+</div>
+<p class="hero-platforms">Windows · macOS · Linux</p>
+</div>
+<div class="hero-stats"><div><b>1.8.9 → 26.3</b><span>Versions supported</span></div><div><b>60+</b><span>Built-in mods</span></div><div><b>4</b><span>One-click profiles</span></div></div>
+</div>
+</section>
+<div class="band"><div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Keystrokes</span><span>CPS Counter</span><span>Toggle Sprint</span><span>Armor Status</span><span>Waypoints</span><span>Freelook</span><span>Scoreboard</span><span>Ping Display</span><span>Reach Display</span><span>Item Physics</span><span>Saturation</span><span>Hit Color</span><span>Motion Blur</span><span>Zoom</span><span>Chat Tabs</span><span>Block Overlay</span><span>Combo Counter</span><span>Fullbright</span><span>Keystrokes</span><span>CPS Counter</span><span>Toggle Sprint</span><span>Armor Status</span><span>Waypoints</span><span>Freelook</span><span>Scoreboard</span><span>Ping Display</span><span>Reach Display</span><span>Item Physics</span><span>Saturation</span><span>Hit Color</span><span>Motion Blur</span><span>Zoom</span><span>Chat Tabs</span><span>Block Overlay</span><span>Combo Counter</span><span>Fullbright</span></div></div></div>
+<section class="band"><div class="wrap section">
+<div class="section-head"><div class="eyebrow"><span class="idx">01</span><span class="rule"></span><span class="lbl">Why Hollow</span></div><h2 class="h-section">Tuned for the people who count ticks.</h2><p class="lead">Every decision in the client answers one question: does this make the next second of play feel better?</p></div>
+<div class="features"><div class="feature"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg></div><h3>Frame-time, not just frame rate</h3><p>The render path skips vanilla overhead and smooths the spikes that actually cost you a trade.</p></div><div class="feature"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-blocks"/></svg></div><h3>60+ mods, already in</h3><p>Keystrokes, CPS, armour status, waypoints, freelook, toggle sprint — toggle each one per profile.</p></div><div class="feature"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div><h3>Profiles that switch in one click</h3><p>PvP, survival, building and recording, each with its own mods, keybinds and render distance.</p></div><div class="feature"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></div><h3>Cosmetics, no tax</h3><p>Capes, wings and emotes render on your machine and never touch your frame budget.</p></div><div class="feature"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-package"/></svg></div><h3>One launcher, every version</h3><p>1.8.9 through 26.3 installed side by side. Stop juggling folders before you queue.</p></div><div class="feature"><div class="ico"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg></div><h3>Vanilla-safe by design</h3><p>Nothing leaves your client. Servers see stock Minecraft, and your worlds stay untouched.</p></div></div>
+</div></section>
+<section class="band band-tint"><div class="wrap section split split-hood">
+<div class="sticky-col"><div class="eyebrow"><span class="idx">02</span><span class="rule"></span><span class="lbl">Under the hood</span></div><h2 class="h-section">A shorter path from tick to pixel.</h2><p class="lead" style="max-width:24rem">Hollow is not a pile of mods on top of vanilla. It is a leaner client that happens to ship with them.</p></div>
+<div class="hood-list"><div><span class="n">01</span><h3>Rendering</h3><p>Batched chunk updates and a trimmed HUD loop, so the work that used to land mid-fight happens once, up front.</p></div><div><span class="n">02</span><h3>Memory</h3><p>Every mod shares a single loader. The client idles below vanilla's footprint instead of creeping above it.</p></div><div><span class="n">03</span><h3>Startup</h3><p>Cold launch drops you straight back into the profile and version you closed, before the menu finishes drawing.</p></div></div>
+</div></section>
+<section class="band"><div class="wrap" style="padding-top:5rem;padding-bottom:5rem"><div class="latest" id="latest-build"></div></div></section>
+<section class="band" id="faq"><div class="wrap section split split-faq">
+<div><div class="eyebrow"><span class="idx">04</span><span class="rule"></span><span class="lbl">Questions</span></div><h2 class="h-section">Before you install.</h2></div>
+<div class="faq"><details><summary>Is Hollow Client free?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><p>Yes. The client, the mod library and the cosmetics are all free. No paid tiers, no ads inside the launcher.</p></details><details><summary>Will using it get me banned?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><p>Hollow only changes what happens on your screen. It never sends modified packets, so servers see a vanilla client — it is safe anywhere vanilla is allowed. Check each server's rules anyway.</p></details><details><summary>Which Minecraft versions are supported?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><p>Everything from 1.8.9 through 26.3, installed side by side from a single launcher. New Minecraft releases are added as they ship.</p></details><details><summary>Does it work on macOS and Linux?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><p>Yes. There are native builds for both, including Apple silicon. Performance tuning is identical to the Windows build.</p></details><details><summary>Do I need Java installed?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><p>No. A tuned Java 17 runtime ships inside the installer and is only used by Hollow, so it will not touch anything else on your machine.</p></details><details><summary>What happens to my worlds and other mods?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary><p>They stay exactly where they are. Hollow keeps its own folder, so vanilla and any other client keep working the way they always did. Uninstalling leaves your saves untouched.</p></details></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="footer-top">
+<div><span class="brand" style="pointer-events:none"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="mark-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="hsl(252 100% 75%)"/><stop offset="100%" stop-color="hsl(170 88% 52%)"/></linearGradient></defs><circle cx="16" cy="16" r="12.5" fill="none" stroke="url(#mark-f)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="66 13" transform="rotate(-38 16 16)"/><circle cx="16" cy="16" r="3.4" fill="hsl(40 22% 95%)"/></svg><span class="brand-name"><b>Hollow</b><span>client</span></span></span>
+<p>A client built around the only thing that matters mid-fight: the next frame.</p>
+<a class="get" href="downloads.html">Get Hollow Client <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></div>
+<div><h4>Client</h4><ul><li><a href="downloads.html">Downloads</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="shop.html">Cosmetics shop</a></li></ul></div>
+<div><h4>Reference</h4><ul><li><a href="downloads.html#requirements">System requirements</a></li><li><a href="downloads.html#requirements">Supported versions</a></li><li><a href="downloads.html#install">Install guide</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Hollow Client. All rights reserved.</p><p>Not affiliated with Mojang Studios or Microsoft.</p></div>
+</div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

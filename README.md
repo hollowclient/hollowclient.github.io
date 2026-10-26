@@ -7,13 +7,14 @@ index.html        Home
 downloads.html    Downloads
 changelog.html    Release notes
 shop.html         Cosmetics shop
-assets/
-  style.css       All styling (design tokens at the top)
-  app.js          Page behaviour
-  data.js         Releases and cosmetics  <-- the file you edit most
-  hero.jpg        Hero background
-  favicon.svg
+style.css         All styling (design tokens at the top)
+app.js            Page behaviour
+data.js           Releases and cosmetics  <-- the file you edit most
+hero.jpg          Hero background
+favicon.svg
 ```
+
+All files live in one folder level, so you can drag them all into GitHub at once.
 
 ## Put it on GitHub Pages (free)
 
@@ -27,7 +28,7 @@ Netlify and Vercel also work: drag the folder in, or connect the repository.
 
 ## Common edits
 
-**Add a real download link** — in `assets/data.js`, paste the installer URL (a GitHub Releases asset works well):
+**Add a real download link** — in `data.js`, paste the installer URL (a GitHub Releases asset works well):
 
 ```js
 downloads: { windows: "https://github.com/you/hollow/releases/download/v0.0.1/Hollow-Setup.exe", macos: "", linux: "" }
@@ -39,7 +40,7 @@ An empty string keeps the button on "Coming soon".
 
 **Change cosmetics** — edit the `cosmetics` list in `data.js`. The names and quests there are placeholders.
 
-**Change colours** — edit the HSL values under `:root` at the top of `assets/style.css`.
+**Change colours** — edit the HSL values under `:root` at the top of `style.css`.
 
 ## License
 
