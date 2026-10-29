@@ -1,6 +1,8 @@
 /* Hollow Launcher — site styles
    Design tokens are HSL triplets so alpha can be added: hsl(var(--primary) / .4) */
 
+@font-face { font-family: "Pixelify Sans"; src: url("pixelify-sans.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+
 :root {
   --bg: 240 15% 4%;
   --fg: 40 22% 95%;
